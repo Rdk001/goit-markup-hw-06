@@ -63,19 +63,6 @@
         <button class="button primary" data-modal-open>Замовити послугу</button>
       </section>
 
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button class="modal-btn" type="button" data-modal-close>
-            <svg class="modal-svg" width="18px" height="18px">
-              <use
-                href="./images/icons.svg#close-back"
-                aria-hidden="true"
-              ></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-
       <!-- Особливості -->
       <section class="section">
         <div class="container">
@@ -438,8 +425,105 @@
             </li>
           </ul>
         </div>
+        <!-- Форма Футер -->
+        <form class="form">
+          <div class="form-filed">
+            <label class="form-label" for="email"
+              >Підпишіться на розсилку</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+          </div>
+          <button class="form-btn" type="submit">
+            Підписатися
+            <svg class="icon-form-footer" width="24px" height="24px">
+              <use href="./images/icons.svg#icon-icon-send-1"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
+
+    <!-- Модальное Окно -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <form class="form-modal">
+          <p class="form-text-modal">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="form-filed-modal">
+            <input
+              class="form-input-modal"
+              type="text"
+              name="name"
+              id="name"
+              placeholder=" "
+            />
+            <label class="form-label-modal" for="name">Ім'я</label>
+            <svg class="icon-modal" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-person-black-18dp-1-1"></use>
+            </svg>
+          </div>
+          <div class="form-filed-modal">
+            <input
+              class="form-input-modal"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder=" "
+            />
+            <label class="form-label-modal" for="tel">Телефон</label>
+            <svg class="icon-modal" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-phone-black-18dp-1-1"></use>
+            </svg>
+          </div>
+          <div class="form-filed-modal">
+            <input
+              class="form-input-modal"
+              type="email"
+              name="email"
+              id="mail"
+              placeholder=" "
+            />
+            <label class="form-label-modal" for="mail">Пошта</label>
+            <svg class="icon-modal" width="18px" height="18px">
+              <use href="./images/icons.svg#icon-email-black-18dp-1-1"></use>
+            </svg>
+          </div>
+          <div class="form-filed-modal">
+            <label class="form-label-moda" for="comment">Коментар</label>
+            <textarea
+              class="form-textarea-modal"
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <div class="form-checkbox-modal">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+            />
+            <label class="label-checkbox" for="checkbox"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="" class="label-checkbox-link">Умови договору</a>
+            </label>
+          </div>
+          <button class="modal-btn" type="submit">Відправити</button>
+        </form>
+        <button class="modal-btn-close" type="button" data-modal-close>
+          <svg class="modal-svg" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
