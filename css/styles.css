@@ -971,6 +971,7 @@ img {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  padding-left: 10px;
 }
 
 .input-checkbox {
