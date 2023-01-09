@@ -42,10 +42,13 @@ body {
   padding-top: 0;
 }
 
+:focus {
+  outline: none;
+}
+
 /* Навигація */
 
 .header {
-  background-color: var(--white-bg-color);
   border-bottom: 1px solid #ececec;
 }
 
@@ -93,22 +96,15 @@ body {
   position: relative;
 }
 
-.site-nav .link::after {
+.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   content: "";
   width: 100%;
   height: 4px;
   display: block;
   background: var(--blue-bg-color);
   border-radius: 2px;
-  opacity: 0;
-
-  transition: opacity 250ms var(--timing-function);
-}
-
-.site-nav .link.current::after {
-  opacity: 1;
 }
 
 .site-nav .link {
@@ -407,7 +403,7 @@ body {
 .social-media {
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .social-media .link + .link {
@@ -591,7 +587,7 @@ body {
   margin-bottom: 0;
 }
 
-.item-footer:not(:last-child) {
+.footer-link:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -605,6 +601,12 @@ body {
 .footer-link {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition: color 250ms var(--timing-function);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--blue-bg-color);
 }
 
 .icon-list {
@@ -670,6 +672,7 @@ img {
   justify-content: center;
   list-style: none;
 
+  padding: 0;
   margin-top: 0;
   margin-bottom: 50px;
 }
@@ -1034,6 +1037,7 @@ img {
   border-radius: 50%;
   background: var(--white-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .modal-btn {
@@ -1054,6 +1058,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .modal-svg {
@@ -1125,6 +1130,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .form-btn-text {
